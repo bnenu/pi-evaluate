@@ -63,6 +63,9 @@ For document outputs (contract mentions "document", "report", "section", "README
 - Check file existence
 - Check key sections are present using `grep`
 
+For skill/config outputs (contract mentions "skill", "artifact", "config"):
+- Check file existence and structural checks (frontmatter, required fields)
+
 For mixed outputs — do both.
 
 Infer the output type from contract language. Do not ask the user to declare it.
@@ -121,9 +124,43 @@ The triage summary is the primary output. The human reads this first to decide w
 
 ---
 
+## Step 5 — Write evaluations.md
+
+**Reespec mode only.** After producing the verdict and triage summary, append the
+result to the request's evaluation log.
+
+```
+reespec/requests/<name>/evaluations.md
+```
+
+- If the file does not exist — create it.
+- If it already exists — append to it (do NOT overwrite).
+
+Entry format:
+
+```markdown
+## Evaluation — YYYY-MM-DD HH:MM
+
+<all verdict blocks, exactly as shown to the user>
+
+<triage summary, exactly as shown to the user>
+
+---
+```
+
+After writing, confirm to the user:
+> "Evaluation logged to `reespec/requests/<name>/evaluations.md`."
+
+**Standalone mode:** No `evaluations.md` is written — there is no reespec artifact
+path to write to. Note this to the user:
+> "(Standalone mode — verdict not persisted. Run inside a reespec project to log evaluations.)"
+
+---
+
 ## Guardrails
 
 - **Never read `tasks.md` or `design.md`** — these are excluded by design. You must not look at them.
+- **Never read previous `evaluations.md` entries** — judge fresh each time.
 - **Never re-enter execute** — you report gaps, you do not fix them.
 - **Never fix gaps** — your only output is verdicts and triage. Suggest the human re-run execute if needed.
 - **Always anchor reasons** — every reason must cite contract language (quote it) or a file path. No floating claims.
