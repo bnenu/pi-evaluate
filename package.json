@@ -1,0 +1,29 @@
+{
+  "name": "pi-evaluate",
+  "version": "0.1.0",
+  "description": "Adversarial post-execute evaluation skill for pi — verifies implementation against contract, GAN-inspired",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "evaluate",
+    "extension",
+    "reespec",
+    "gan",
+    "review"
+  ],
+  "author": "Bogdan Nenu",
+  "license": "MIT",
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  },
+  "files": [
+    "extensions/",
+    "skills/",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": ">=0.62.0"
+  }
+}
