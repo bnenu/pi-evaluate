@@ -162,3 +162,7 @@ The key insight: **the discriminator is blind to implementation intent**. It can
 ## License
 
 MIT
+
+---
+
+Made with [reespec](https://reespec.dev) and ♥ in EU
