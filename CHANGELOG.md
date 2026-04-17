@@ -4,6 +4,14 @@ All notable changes to `pi-evaluate` are documented here.
 
 ---
 
+## [0.1.1] — 2026-04-17
+
+### Changed
+
+- Raised `peerDependencies` floor to `>=0.67.6` to document tested pi version.
+
+---
+
 ## 0.1.0 — 2026-03-30
 
 Initial release.
