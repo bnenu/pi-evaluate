@@ -1,6 +1,6 @@
 {
   "name": "pi-evaluate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Adversarial post-execute evaluation skill for pi — verifies implementation against contract, GAN-inspired",
   "keywords": [
     "pi-package",
@@ -24,6 +24,6 @@
     "README.md"
   ],
   "peerDependencies": {
-    "@mariozechner/pi-coding-agent": ">=0.67.6"
+    "@mariozechner/pi-coding-agent": ">=0.70.6"
   }
 }
