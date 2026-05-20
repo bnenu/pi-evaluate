@@ -4,6 +4,16 @@ All notable changes to `pi-evaluate` are documented here.
 
 ---
 
+## [0.1.3] — 2026-05-20
+
+### Changed
+
+- Updated `peerDependencies` from `@mariozechner/pi-coding-agent` to `@earendil-works/pi-coding-agent` following the upstream package scope rename in pi v0.74.0.
+- Raised `peerDependencies` floor to `>=0.75.3` to reflect tested pi version.
+- Updated `ExtensionAPI` import in `extensions/evaluate.ts` to the new `@earendil-works/pi-coding-agent` scope.
+
+---
+
 ## [0.1.2] — 2026-04-29
 
 ### Changed
